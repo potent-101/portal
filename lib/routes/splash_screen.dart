@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pleasework/theme/constants.dart';
+import 'package:pleasework/theme/theme.dart';
 
 class SplashScreen extends StatelessWidget{
 
@@ -6,7 +8,18 @@ class SplashScreen extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return Center();
+    return Theme(data: splashThemeData,
+        child: const Scaffold(
+          body: Center(
+            child: Text('portal pro max',
+              style: TextStyle(
+                color: onPrimaryColor,
+                fontSize: 40,
+              ),
+            ),
+          ),
+        )
+    );
   }
 
 }
