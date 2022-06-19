@@ -11,7 +11,7 @@ class RouteGenerator{
   static Route<dynamic> generateRoute(RouteSettings settings){
     switch(settings.name){
       case splashScreen :
-        return MaterialPageRoute(builder: (_)=> const SplashScreen(),);
+        return MaterialPageRoute(builder: (_)=> const MySplashScreen(),);
       default:
         throw const FormatException('Route not found');
     }

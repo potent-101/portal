@@ -1,7 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:pleasework/routes.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      //systemStatusBarContrastEnforced: true,
+      systemNavigationBarColor: Colors.transparent,
+     // systemNavigationBarDividerColor: Colors.transparent,
+      systemNavigationBarIconBrightness: Brightness.light,
+      //statusBarIconBrightness: Brightness.dark,
+      statusBarColor: Colors.transparent
+  )
+  );
+
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+      overlays: [SystemUiOverlay.top]);
   runApp( Portal());
 }
 
