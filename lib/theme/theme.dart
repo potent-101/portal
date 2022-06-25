@@ -6,3 +6,6 @@ import 'package:pleasework/theme/constants.dart';
    fontFamily: josefinSansFontFamily,
 
 );
+ var pTheme = ThemeData(
+   fontFamily: josefinSansFontFamily,
+ );
