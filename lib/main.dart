@@ -7,33 +7,26 @@ void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
       //systemStatusBarContrastEnforced: true,
       systemNavigationBarColor: Colors.transparent,
-     // systemNavigationBarDividerColor: Colors.transparent,
+      // systemNavigationBarDividerColor: Colors.transparent,
       systemNavigationBarIconBrightness: Brightness.light,
       //statusBarIconBrightness: Brightness.dark,
-      statusBarColor: Colors.transparent
-  )
-  );
+      statusBarColor: Colors.transparent));
 
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
       overlays: [SystemUiOverlay.top]);
-  runApp( Portal());
+  runApp(Portal());
 }
 
-class Portal extends StatelessWidget{
-   Portal({Key? key}) : super(key: key);
+class Portal extends StatelessWidget {
+  Portal({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      onGenerateTitle: (context)=> "portal",
+      onGenerateTitle: (context) => "portal",
       onGenerateRoute: RouteGenerator.generateRoute,
       initialRoute: RouteGenerator.splashScreen,
       debugShowCheckedModeBanner: false,
     );
   }
 }
-
-
-
-
-
