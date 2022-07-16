@@ -38,6 +38,7 @@ dependencies:
   rive: ^0.8.4
   riverpod: ^1.0.3
   flutter_svg: ^1.1.0
+  flutter_inset_box_shadow: ^1.0.8
 
 dev_dependencies:
   flutter_test:
@@ -86,6 +87,7 @@ flutter:
       fonts:
         - asset: assets/font/static/JosefinSans-Regular.ttf
         - asset: assets/font/static/JosefinSans-Bold.ttf
+        - asset: assets/font/static/JosefinSans-SemiBold.ttf
 
 
 
