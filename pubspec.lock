@@ -82,7 +82,7 @@ packages:
       name: flutter_svg
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.0"
+    version: "1.1.1+1"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -165,6 +165,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "5.0.0"
+  pin_code_fields:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: master
+      resolved-ref: "8a5c1c0bc5caad31f49d76621fe917fb4f36fa63"
+      url: "https://github.com/potent-101/pin_code_fields.git"
+    source: git
+    version: "7.4.0"
   rive:
     dependency: "direct main"
     description:

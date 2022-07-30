@@ -6,9 +6,11 @@ class NeuButton extends StatelessWidget {
   final String bText;
   final VoidCallback onTap;
   final double width, height;
+  final Color color;
 
   NeuButton(
       {Key? key,
+      required this.color,
       required this.bText,
       required this.onTap,
       required this.height,
@@ -23,7 +25,7 @@ class NeuButton extends StatelessWidget {
         height: height,
         width: width,
         decoration: BoxDecoration(
-            color: primaryColor,
+            color: color,
             borderRadius: BorderRadius.circular(8),
             boxShadow: [
               BoxShadow(
@@ -41,7 +43,7 @@ class NeuButton extends StatelessWidget {
             style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w600,
-                color: onPrimaryColor.withOpacity(0.8)),
+                color: onPrimaryColor.withOpacity(0.7)),
           ),
         ),
       ),

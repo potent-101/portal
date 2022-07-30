@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pleasework/routes.dart';
 import 'package:pleasework/theme/constants.dart';
 import 'package:pleasework/widgets/neu_Button.dart';
 import 'package:pleasework/widgets/neu_input.dart';
@@ -17,6 +18,7 @@ class VerifyScreen extends StatelessWidget {
     return MyScafBckGround(
       scaffold: Scaffold(
           appBar: AppBar(
+            automaticallyImplyLeading: false,
             elevation: 0,
             backgroundColor: Colors.transparent,
             title: const Center(
@@ -80,11 +82,14 @@ class VerifyScreen extends StatelessWidget {
                     height: 35,
                   ),
                   NeuButton(
-                      color: !isKeyboard ? primaryColor : Color(0xff232A3A),
+                      color: primaryColor,
                       height: 64,
                       width: size.width * 0.9,
                       bText: 'Get Code',
-                      onTap: () {}),
+                      onTap: () {
+                        Navigator.of(context)
+                            .pushNamed(RouteGenerator.codeScreen);
+                      }),
                   const SizedBox(
                     height: 32,
                   ),

@@ -39,6 +39,11 @@ dependencies:
   riverpod: ^1.0.3
   flutter_svg: ^1.1.0
   flutter_inset_box_shadow: ^1.0.8
+  pin_code_fields:
+    git:
+      url: https://github.com/potent-101/pin_code_fields.git
+      ref: master
+
 
 dev_dependencies:
   flutter_test:
