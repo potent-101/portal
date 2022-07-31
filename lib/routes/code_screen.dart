@@ -2,6 +2,7 @@ import 'package:flutter/material.dart' hide BoxDecoration, BoxShadow;
 import 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pleasework/routes.dart';
 import 'package:pleasework/theme/constants.dart';
 import 'package:pleasework/widgets/neu_Button.dart';
 
@@ -116,7 +117,10 @@ class CodeScreen extends StatelessWidget {
                       height: 64,
                       width: size.width * 0.9,
                       bText: 'Verify',
-                      onTap: () {}),
+                      onTap: () {
+                        Navigator.of(context)
+                            .pushNamed(RouteGenerator.userScreen);
+                      }),
                   const SizedBox(
                     height: 32,
                   ),
