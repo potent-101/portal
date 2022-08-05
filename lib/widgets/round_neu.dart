@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:pleasework/theme/constants.dart';
+import 'package:flutter/src/foundation/key.dart';
+import 'package:flutter/src/widgets/framework.dart';
 
-class NeuButton extends StatelessWidget {
-  final String bText;
+class RoundNeu extends StatelessWidget {
   final VoidCallback onTap;
   final double width, height;
   final Color color;
   final BoxShape shape;
+  final Widget? child;
+  final double opacity;
 
-  NeuButton(
+  final BorderRadius? borderRadius;
+
+  const RoundNeu(
       {Key? key,
+      this.borderRadius,
       this.shape = BoxShape.rectangle,
+      this.opacity = 0.2,
+      required this.child,
       required this.color,
-      this.bText = '',
       required this.onTap,
       required this.height,
       required this.width})
@@ -29,7 +34,7 @@ class NeuButton extends StatelessWidget {
         decoration: BoxDecoration(
             shape: shape,
             color: color,
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: borderRadius,
             boxShadow: [
               BoxShadow(
                   blurRadius: 10,
@@ -38,17 +43,9 @@ class NeuButton extends StatelessWidget {
               BoxShadow(
                   blurRadius: 10,
                   offset: const Offset(5, 5),
-                  color: const Color(0xff000000).withOpacity(0.2)),
+                  color: const Color(0xff000000).withOpacity(opacity)),
             ]),
-        child: Center(
-          child: Text(
-            bText,
-            style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.w600,
-                color: onPrimaryColor.withOpacity(0.7)),
-          ),
-        ),
+        child: Center(child: child),
       ),
     );
   }

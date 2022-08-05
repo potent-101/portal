@@ -110,7 +110,7 @@ class UserScreen extends StatelessWidget {
                       bText: 'Done',
                       onTap: () {
                         Navigator.of(context)
-                            .pushNamed(RouteGenerator.codeScreen);
+                            .pushNamed(RouteGenerator.mainScreen);
                       }),
                   const SizedBox(
                     height: 32,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pleasework/routes/code_screen.dart';
+import 'package:pleasework/routes/main_screen_content/main_screen.dart';
 import 'package:pleasework/routes/splash_screen.dart';
 import 'package:pleasework/routes/user_screen.dart';
 
@@ -8,6 +9,7 @@ class RouteGenerator {
   static const String verifyScreen = '/verifyScreen';
   static const String codeScreen = '/codeScreen';
   static const String userScreen = '/userScreen';
+  static const String mainScreen = '/mainScreen';
 
   RouteGenerator._();
 
@@ -24,6 +26,10 @@ class RouteGenerator {
       case userScreen:
         return MaterialPageRoute(
           builder: (_) => const UserScreen(),
+        );
+      case mainScreen:
+        return MaterialPageRoute(
+          builder: (_) => MainScreen(),
         );
       default:
         throw const FormatException('Route not found');
