@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:pleasework/theme/constants.dart';
+import 'package:pleasework/widgets/dialog_main_content.dart';
 import 'package:pleasework/widgets/home_item.dart';
 import 'package:pleasework/widgets/neu_Button.dart';
 import 'package:pleasework/widgets/neu_input.dart';
@@ -123,7 +124,27 @@ class HomeScreen extends StatelessWidget {
                   child: RoundNeu(
                     borderRadius: const BorderRadius.all(Radius.circular(8)),
                     color: const Color(0xff272E3E),
-                    onTap: () {},
+                    onTap: () {
+                      showDialog(
+                          context: context,
+                          barrierColor: Colors.transparent,
+                          builder: (context) {
+                            return SizedBox(
+                              height: 300,
+                              width: 300,
+                              child: Dialog(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(8)),
+                                clipBehavior: Clip.none,
+                                elevation: 0,
+                                child: DialogContent(
+                                  bkColor:
+                                      const Color(0xffffffff).withOpacity(0.0),
+                                ),
+                              ),
+                            );
+                          });
+                    },
                     height: 48,
                     width: 48,
                     child: RotatedBox(
